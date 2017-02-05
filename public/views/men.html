@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div ng-repeat="menPerfume in menCollection" class="col-sm-4" >
+			<div class="mensCollection" ng-mouseover="highlight(this)">
+				<a href="{{menPerfume.url}}">
+					<img src="../img/{{menPerfume.img}}"</img>
+				</a>
+				<p>{{menPerfume.price | currencyInRupee }}</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+#logo {
+	background-image: url('../img/logo.png');
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	display: inline-block;
+}
+
+#searchBar {
+	float: right;
+	vertical-align: bottom;
+	border: 2px solid black;
+	padding: 5px;
+	margin-top: 30px;
+	border-radius: 4px;
+}
+
+#searchButton {
+	background: black;
+	color: white;
+}
+
+#spotlight {
+	width: 90%;
+	margin: auto;
+	height: 500px;
+}
+
+#spotlight div,
+#spotlight img {
+	width: 100%;
+	height: 500px;
+}
+
+.mensCollection {
+	width: 312px;
+	height: 290px;
+	margin-bottom: 80px;
+}
+
+.highlightStyle {
+	border: "2px solid black";
+}
