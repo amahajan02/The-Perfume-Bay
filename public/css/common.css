@@ -38,6 +38,10 @@
 	margin-bottom: 80px;
 }
 
+/*.mensCollection:hover {
+	border: 2px solid black;
+}*/
+
 .highlightStyle {
 	border: "2px solid black";
 }

@@ -2,7 +2,7 @@
 	<div class="row">
 		<div ng-repeat="menPerfume in menCollection" class="col-sm-4" >
 			<div class="mensCollection" ng-mouseover="highlight(this)">
-				<a href="{{menPerfume.url}}">
+				<a href="{{menPerfume.url}}" ng-click="showDetails()">
 					<img src="../img/{{menPerfume.img}}"</img>
 				</a>
 				<p>{{menPerfume.price | currencyInRupee }}</p>
