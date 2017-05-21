@@ -46,11 +46,10 @@
 	border: "2px solid black";
 }
 
-.detailTitle {
-	font-size: 35px;
+.detailsDiv {
+	float: right;
 }
 
-.detailPrice {
-	font-size: 15px;
-    font-weight: bold;
+.ratingReview {
+	display: inline-block;
 }
