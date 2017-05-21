@@ -2,7 +2,7 @@ var myApp = angular.module("mainContent", ["ngRoute"]);
 myApp.controller("mainContentController", function($scope, $http) {
 	$scope.menCollection = [];
 	$http.get("js/data.json").then(function(data) {
-		$scope.menCollection = 	data;
+		$scope.menCollection = 	data.data;
 	}, function(data, status, headers, config, statusText) {
 		console.log(data);
 		console.log(status);
@@ -21,37 +21,28 @@ myApp.controller("mainContentController", function($scope, $http) {
 myApp.config(["$routeProvider", function($routeProvider) {
 	$routeProvider.
 	when("/home", {
-		templateUrl: "views/home.html"
+		// templateUrl: "views/home.html"
+		templateUrl: "home.html"
 	}).
 	when("/women", {
-		templateUrl: "views/women.html"
+		// templateUrl: "views/women.html"
+		templateUrl: "women.html"
 	}).
 	when("/men", {
-		template: '<div class="container">' + 
-					'<div class="row">' +
-						'<div ng-repeat="menPerfume in menCollection" class="col-sm-4">' + 
-							'<div class="mensCollection" ng-mouseover="highlight()" ng-style="highlightStyle">' +
-								'<a href="#details" ng-click="showDetails(menPerfume)">' +
-									'<img src="../public/img/{{menPerfume.img}}"></img>' +
-								'</a>' +
-								'<p>{{menPerfume.price | currencyInRupee }}</p>' +
-							'</div>' +
-						'</div>' +
-					'</div>' + 
-				'</div>'
+		// templateUrl: "views/men1.html"
+		templateUrl: "men1.html"
 	}).
 	when("/brands", {
-		templateUrl: "views/brands.html"
+		// templateUrl: "views/brands.html"
+		templateUrl: "brands.html"
 	}).
 	when("/offers", {
-		templateUrl: "views/offers.html"
+		// templateUrl: "views/offers.html"
+		templateUrl: "offers.html"
 	}).
 	when("/details", {
-		template: '<div>' + 
-					'<div>{{details.name}}</div>' +
-					'<img ng-src="../public/img/{{details.img}}" />' + 
-					'<div>{{details.price}}</div>' +
-				'</div>'
+		// templateUrl: "views/details1.html"
+		templateUrl: "details1.html"
 	});
 }]);
 

@@ -1,0 +1,11 @@
+<div>
+	<img ng-src="../public/img/{{details.img}}" />
+	<div ng-class="detailTitle">{{details.name}}({{details.quantity}})</div>
+	<div>Ratings({{details.ratings}})</div>
+	<hr>
+	<div ng-class="detailPrice">{{details.price | currencyInRupee}}</div>
+	<ul>
+		<li>Description<p>{{details.description}}</p></li>
+		<li>Specs</li>
+	</ul>
+</div>
