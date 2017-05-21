@@ -1,0 +1,33 @@
+<div>
+	<div class="row">
+		<div class="col-sm-offset-1 col-sm-3">
+			<img ng-src="{{details.img}}" />
+		</div>
+		<div class="col-sm-offset-1 col-sm-4">
+			<h1>{{details.name}}</h1>
+			<hr>
+			<div>
+				<h5 class="ratingReview">Ratings <span class="badge"> {{details.ratings}}</span></h5>
+				<h5 class="ratingReview"><a href="#reviews">Reviews </a><span class="badge"> {{details.reviews.length}}</span></h5>
+			</div>
+			<div class="success">Rs. {{details.price}}</div>
+			<select ng-option="x.size for x in details.availableSizes" ng-model="selectedSize"></select>
+			<ul>
+				<li>Description</li>
+				<li>Specs</li>
+			</ul>
+		</div>
+	</div>
+	<div id="reviews">
+		<h3>Reviews</h3>
+		<table>
+			<tr ng-repeat="review in details.reviews">
+				<td><ul>
+						<li ng-repeat="stars in review.rating"><span class="glyphicon glyphicon-star"></span></li>
+					</ul>
+					{{review.author}}</td>
+				<td>{{review.body}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
