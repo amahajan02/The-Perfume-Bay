@@ -45,3 +45,12 @@
 .highlightStyle {
 	border: "2px solid black";
 }
+
+.detailTitle {
+	font-size: 35px;
+}
+
+.detailPrice {
+	font-size: 15px;
+    font-weight: bold;
+}
